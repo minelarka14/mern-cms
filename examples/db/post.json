@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "user": "String",
+    "createdAt": "String",
+    "likes": "Number",
+    "comments": [{
+      "meta": {
+        "user": "String",
+        "createdAt": "String",
+        "likes": "Number"
+      },
+      "data": {
+        "body": "String"
+      }
+    }]
+  },
+  "data": {
+    "title": "String",
+    "subtitle": "String",
+    "body": "String"
+  }
+}
