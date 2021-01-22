@@ -22,8 +22,6 @@ module.exports.commentSchema = new mong.Schema({
         post: String
     },
     data: {
-        title: String,
-        subtitle: String,
-        body: String,
+        body:  String,
     }
 })
