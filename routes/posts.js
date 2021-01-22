@@ -51,4 +51,18 @@ app.get('/one', (req, res) => {
     })
 })
 
+app.get('/all', (req, res) => {
+    db.posts.getAllPosts().then((d) => {
+        res.status(200).json({
+            result: 'success',
+            data: d
+        })
+    }).catch((e) => {
+        res.status(500).json({
+            result: 'error',
+            error: e,
+        })
+    })
+})
+
 module.exports = app;
