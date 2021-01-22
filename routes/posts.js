@@ -5,7 +5,7 @@ const db = require('../util/db');
 
 /* POST */
 app.post('/create', function(req, res) {
-    db.createPost({
+    db.posts.createPost({
         meta: {
             user: req.query.user,
             createdAt: (new Date).toISOString(),

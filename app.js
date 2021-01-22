@@ -7,11 +7,13 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const postsRouter = require('./routes/posts');
 
-const {mongooseInit} = require('./util/db')
+const {util} = require('./util/db')
 
 const app = express();
 
-mongooseInit();
+util.mongooseInit().then(() => {
+  console.log('Connected to MongoDB');
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
