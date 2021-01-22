@@ -5,16 +5,21 @@ module.exports.postSchema = new mong.Schema({
         user: String,
         createdAt: String, // ISO Date ONLY
         likes: Number,
-        comments: [{
-            meta: {
-                user: String,
-                createdAt: String,
-                likes: Number
-            },
-            data: {
-                body: String,
-            }
-        }]
+        comments: [String]
+    },
+    data: {
+        title: String,
+        subtitle: String,
+        body: String,
+    }
+})
+
+module.exports.commentSchema = new mong.Schema({
+    meta: {
+        user: String,
+        createdAt: String,
+        likes: Number,
+        post: String
     },
     data: {
         title: String,
