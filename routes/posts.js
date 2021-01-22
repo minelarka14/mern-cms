@@ -30,9 +30,8 @@ app.post('/create', function(req, res) {
 });
 
 /* GET */
-
 app.get('/one', (req, res) => {
-    db.getPost(req.query.id).then((result) => {
+    db.posts.getPost(req.query.id).then((result) => {
         if (result.error) {
             res.status(204).json({
                 result: 'Not Found'
